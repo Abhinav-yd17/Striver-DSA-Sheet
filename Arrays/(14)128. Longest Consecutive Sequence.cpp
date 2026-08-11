@@ -3,24 +3,26 @@ using namespace std;
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        unordered_set<int> st(nums.begin(), nums.end());
+        if (nums.size() == 0) return 0;
 
-        int longest = 0;
+        sort(nums.begin(), nums.end());
 
-        for (int num : st) {
-            if (st.find(num - 1) == st.end()) {
-                int current = num;
-                int count = 1;
+        int n = nums.size();
+        int lastSmaller = INT_MIN;
+        int cnt = 0;
+        int longest = 1;
 
-                while (st.find(current + 1) != st.end()) {
-                    current++;
-                    count++;
-                }
-
-                longest = max(longest, count);
+        for (int i = 0; i < n; i++) {
+            if (nums[i] - 1 == lastSmaller) {
+                cnt++;
+                lastSmaller = nums[i];
             }
+            else if (lastSmaller != nums[i]) {
+                cnt = 1;
+                lastSmaller = nums[i];
+            }
+            longest = max(longest, cnt);
         }
-
         return longest;
     }
 };

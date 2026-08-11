@@ -8,25 +8,21 @@ public:
             ans.push_back(s);
             return;
         }
-
         if (open == close) {
             string s1 = s;
             s1.push_back('(');
             solve(s1, open - 1, close, ans);
         }
-
         else if (open == 0) {
             string s1 = s;
             s1.push_back(')');
             solve(s1, open, close - 1, ans);
         }
-
         else if (close == 0) {
             string s1 = s;
             s1.push_back('(');
             solve(s1, open - 1, close, ans);
         }
-
         else {
             string s1 = s;
             string s2 = s;

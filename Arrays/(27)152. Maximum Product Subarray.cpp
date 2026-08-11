@@ -16,7 +16,6 @@ public:
 
             ans = max(ans, currMax);
         }
-
         return ans;
     }
 };

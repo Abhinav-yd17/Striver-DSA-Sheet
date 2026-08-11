@@ -14,7 +14,6 @@ public:
             a = a * a % mod;
             b /= 2;
         }
-
         return ans;
     }
     int countGoodNumbers(long long n) {

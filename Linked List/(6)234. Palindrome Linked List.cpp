@@ -11,39 +11,47 @@ struct ListNode {
 };
 class Solution {
 public:
-    bool isPalindrome(ListNode* head)
-    {
-        if (head == NULL || head->next == NULL)
+    ListNode* reverseLinkedList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr)
+            return head;
+
+        ListNode* newHead = reverseLinkedList(head->next);
+
+        ListNode* front = head->next;
+        front->next = head;
+        head->next = nullptr;
+
+        return newHead;
+    }
+
+    bool isPalindrome(ListNode* head) {
+        if (head == nullptr || head->next == nullptr)
             return true;
 
         ListNode* slow = head;
         ListNode* fast = head;
 
-        while (fast->next != NULL && fast->next->next != NULL) {
+        while (fast->next != nullptr && fast->next->next != nullptr) {
             slow = slow->next;
             fast = fast->next->next;
         }
 
-        ListNode* prev = NULL;
-        ListNode* curr = slow->next;
-
-        while (curr != NULL) {
-            ListNode* nextNode = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = nextNode;
-        }
+        ListNode* newHead = reverseLinkedList(slow->next);
 
         ListNode* first = head;
-        ListNode* second = prev;
+        ListNode* second = newHead;
 
-        while (second != NULL) {
-            if (first->val != second->val)
+        while (second != nullptr) {
+            if (first->val != second->val) {
+                reverseLinkedList(newHead); // Restore the list
                 return false;
+            }
+
             first = first->next;
             second = second->next;
         }
 
+        reverseLinkedList(newHead); // Restore the list
         return true;
     }
 };

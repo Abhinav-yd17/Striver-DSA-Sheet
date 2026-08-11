@@ -11,7 +11,6 @@ struct ListNode {
 };
 class Solution {
 public:
-
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         ListNode* dummyNode = new ListNode(-1);
         ListNode* temp = dummyNode;
@@ -45,7 +44,6 @@ public:
 
         return slow;
     }
-
     ListNode* sortList(ListNode* head) {
         if(head == NULL || head->next == NULL)
             return head;

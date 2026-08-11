@@ -21,7 +21,6 @@ public:
             tail = tail->next;
             len++;
         }
-
         k = k % len;
         if (k == 0) return head;
 
@@ -32,7 +31,6 @@ public:
         for (int i = 1; i < steps; i++) {
             newLast = newLast->next;
         }
-
         ListNode* newHead = newLast->next;
         newLast->next = NULL;
 

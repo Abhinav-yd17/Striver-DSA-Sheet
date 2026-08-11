@@ -8,7 +8,6 @@ class MinStack {
 public:
     MinStack() {
     }
-    
     void push(int val) {
         if (st.empty()) {
             mini = val;

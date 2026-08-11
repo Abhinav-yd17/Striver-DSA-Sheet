@@ -25,7 +25,6 @@ public:
             curr->next = new ListNode(sum % 10);
             curr = curr->next;
         }
-
         return ans->next;
     }
 };

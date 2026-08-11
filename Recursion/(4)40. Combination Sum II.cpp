@@ -7,7 +7,6 @@ public:
             ans.push_back(ds);
             return ;  
          }
-
          for(int i = ind ; i < arr.size() ; i++){
             if(i>ind && arr[i] == arr[i-1]) continue;
             if(arr[i] > target) break;

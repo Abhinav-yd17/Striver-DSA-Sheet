@@ -23,7 +23,6 @@ class Solution {
             row++;
             col--;
         }
-
         return true;
     }
     void solve(int col, vector<string> &board, vector<vector<string>> &ans, int n) {

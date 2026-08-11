@@ -10,11 +10,9 @@ bool canWePlace(vector<int> &stalls, int dist, int cows) {
             cntCows++;
             last = stalls[i];
         }
-
         if (cntCows >= cows)
             return true;
     }
-
     return false;
 }
 int aggressiveCows(vector<int> &stalls, int k) {
