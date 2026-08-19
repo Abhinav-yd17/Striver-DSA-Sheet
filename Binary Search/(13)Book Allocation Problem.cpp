@@ -28,7 +28,7 @@ int findPages(vector<int> &arr, int n, int m) {
 
         if (students > m) {
             low = mid + 1;
-        } else {
+        }else {
             high = mid - 1;
         }
     }
