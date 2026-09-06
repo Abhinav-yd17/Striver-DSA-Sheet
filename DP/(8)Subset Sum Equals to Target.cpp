@@ -3,14 +3,11 @@ using namespace std;
 class Solution {
 public:
     bool subsetSumToK(int n, int k, vector<int> &arr) {
-
         vector<vector<bool>> dp(n + 1, vector<bool>(k + 1, false));
 
-        // Base Case
         for(int i = 0; i <= n; i++)
             dp[i][0] = true;
 
-        // Fill Table
         for(int i = 1; i <= n; i++) {
 
             for(int target = 1; target <= k; target++) {
@@ -25,7 +22,6 @@ public:
                 dp[i][target] = take || notTake;
             }
         }
-
         return dp[n][k];
     }
 };
