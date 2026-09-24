@@ -19,7 +19,7 @@ public:
             mini = val;
         }
     }
-    void pop() {
+     void pop() {
         long long x = st.top();
         st.pop();
         if (x < mini) {
