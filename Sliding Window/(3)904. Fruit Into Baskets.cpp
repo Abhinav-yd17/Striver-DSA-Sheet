@@ -8,9 +8,7 @@ public:
         int r = 0;
         int maxLen = 0;
         while (r < fruits.size()) {
-
             mpp[fruits[r]]++;
-
 
             if (mpp.size() > 2) {
 
