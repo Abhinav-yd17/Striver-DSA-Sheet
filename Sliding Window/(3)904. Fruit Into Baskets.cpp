@@ -17,7 +17,6 @@ public:
                 if (mpp[fruits[l]] == 0) {
                     mpp.erase(fruits[l]);
                 }
-
                 l++;
             }
             if (mpp.size() <= 2) {
