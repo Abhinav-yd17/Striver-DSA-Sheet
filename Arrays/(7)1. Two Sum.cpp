@@ -11,10 +11,8 @@ public:
             if(mpp.find(moreNeeded) != mpp.end()) {
                 return {mpp[moreNeeded], i};
             }
-
             mpp[nums[i]] = i;
         }
-
         return {};
     }
 };
