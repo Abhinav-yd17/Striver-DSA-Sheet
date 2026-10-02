@@ -11,7 +11,6 @@ public:
         int lastSmaller = INT_MIN;
         int cnt = 0;
         int longest = 1;
-
         for (int i = 0; i < n; i++) {
             if (nums[i] - 1 == lastSmaller) {
                 cnt++;
