@@ -24,6 +24,5 @@ public:
     }
 
     return temp1;
-}
-
-};
+  }
+ };

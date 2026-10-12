@@ -1,0 +1,2 @@
+Array of pairs A each element is a[i] . indicate dependency of one course on another .
+for example if a[i] = <x,y> 
