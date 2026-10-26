@@ -11,6 +11,7 @@ struct TreeNode {
         right = NULL;
     }
 };
+
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
