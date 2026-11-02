@@ -15,6 +15,5 @@ public:
             count++;
         }
         return count <= 1;
-  
     }
 };
